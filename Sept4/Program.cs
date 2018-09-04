@@ -33,22 +33,31 @@ namespace StructsEnumsExamples
                             , model = "924S"
                             , year  = 1987 };
 
-            var nissan350z = 
+            var nissan350z1 = 
                 new Vehicle { type  = VehicleType.Car
                             , color = Color.Grey
                             , make  = "Nissan"
                             , model = "350Z"
                             , year  = 2008 };
 
+            var nissan350z2 =
+                new Vehicle {type = VehicleType.Car
+                            , color = Color.Red
+                            , make = "Nissan"
+                            , model = "350Z"
+                            , year = 2008 };
             // Avoided putting WriteLine Inside of my below method, and instead put it here and used var in the method to make string.
-            
+
             Console.WriteLine(MyFirstVehicleMessage(porsche924s));
 
             // !CAN! use enums in a switch statement!!
-            switch (nissan350z.color)
+            switch (nissan350z1.color)
             {
                 case Color.Grey:
-                    Console.WriteLine(MyFirstVehicleMessage(nissan350z));
+                    Console.WriteLine(MyFirstVehicleMessage(nissan350z1));
+                    break;
+                case Color.Red:
+                    Console.WriteLine(MyFirstVehicleMessage(nissan350z2));
                     break;
             };
         }
